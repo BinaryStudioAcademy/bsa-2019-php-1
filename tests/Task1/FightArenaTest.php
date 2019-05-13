@@ -53,8 +53,8 @@ class FightArenaTest extends TestCase
         $this->arena->add($this->fighter1);
         $this->arena->add($this->fighter2);
 
-        $this->assertEquals($this->fighter1, $this->arena->all()[0]->getId());
-        $this->assertEquals($this->fighter2, $this->arena->all()[1]->getId());
+        $this->assertEquals($this->fighter1->getId(), $this->arena->all()[0]->getId());
+        $this->assertEquals($this->fighter2->getId(), $this->arena->all()[1]->getId());
     }
 
     public function testMostPowerful()
