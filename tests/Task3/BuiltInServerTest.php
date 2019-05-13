@@ -89,7 +89,7 @@ class BuiltInServerTest extends TestCase
             $matches
         );
 
-        $expected = ['1', '1027', '74'];
+        $expected = ['2E5Pouh', '2Vie3lf', '2VZ2tQd'];
 
         $this->assertCount(3, $imageIds);
         $this->assertCount(0, array_diff($expected, $imageIds));

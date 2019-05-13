@@ -4,6 +4,7 @@ require __DIR__ . '/../../vendor/autoload.php';
 
 use App\Task1\FightArena;
 use App\Task3\FightArenaHtmlPresenter;
+use App\Task1\Fighter;
 
 $arena = new FightArena();
 $presenter = new FightArenaHtmlPresenter();
