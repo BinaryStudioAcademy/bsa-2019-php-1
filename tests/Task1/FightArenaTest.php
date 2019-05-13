@@ -29,15 +29,21 @@ class FightArenaTest extends TestCase
 
         $this->arena = new FightArena();
 
-        $this->fighter1 = $this->createMock(Fighter::class);
-        $this->fighter1->method('getId')->willReturn(1);
-        $this->fighter1->method('getHealth')->willReturn(100);
-        $this->fighter1->method('getAttack')->willReturn(30);
+        $this->fighter1 = new Fighter(
+            1,
+            'Ryu',
+            100,
+            10,
+            'https://bit.ly/2E5Pouh'
+        );
 
-        $this->fighter2 = $this->createMock(Fighter::class);
-        $this->fighter2->method('getId')->willReturn(2);
-        $this->fighter1->method('getHealth')->willReturn(50);
-        $this->fighter1->method('getAttack')->willReturn(10);
+        $this->fighter2 = new Fighter(
+            2,
+            'Chun-Li',
+            70,
+            30,
+            'https://bit.ly/2Vie3lf'
+        );
     }
 
     public function testAll()
@@ -70,6 +76,6 @@ class FightArenaTest extends TestCase
         $this->arena->add($this->fighter1);
         $this->arena->add($this->fighter2);
 
-        $this->assertEquals(50, $this->arena->mostDamageable()->getHealth());
+        $this->assertEquals(70, $this->arena->mostDamageable()->getHealth());
     }
 }
