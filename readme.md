@@ -54,8 +54,8 @@ composer install
 
 * `add`
 * `all`
-* `mostDangerous`
-* `mostDamageable`
+* `mostPowerful`(больше атака, но меньше здоровье)
+* `mostHealthy`(меньше атака, но больше здоровье)
 
 Проверить себя можно запустив:
 ```bash

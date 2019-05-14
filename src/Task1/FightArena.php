@@ -16,7 +16,7 @@ class FightArena
         // @todo
     }
 
-    public function mostDamageable(): Fighter
+    public function mostHealthy(): Fighter
     {
         // @todo
     }

@@ -71,11 +71,11 @@ class FightArenaTest extends TestCase
         $this->assertEquals(30, $this->arena->mostPowerful()->getAttack());
     }
 
-    public function testMostDamageable()
+    public function testMostHealty()
     {
         $this->arena->add($this->fighter1);
         $this->arena->add($this->fighter2);
 
-        $this->assertEquals(70, $this->arena->mostDamageable()->getHealth());
+        $this->assertEquals(100, $this->arena->mostHealthy()->getHealth());
     }
 }
