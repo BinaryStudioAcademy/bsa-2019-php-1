@@ -32,7 +32,7 @@ class BuiltInServerTest extends TestCase
     {
         $page = file_get_contents(BuiltInServerRunner::TEST_ENDPOINT);
 
-        $this->assertContains('<title>Built-in Web Server</title>', $page);
+        $this->assertStringContainsString('<title>Built-in Web Server</title>', $page);
     }
 
     public function testShowsAll()
@@ -59,7 +59,7 @@ class BuiltInServerTest extends TestCase
 
         $matches = [];
 
-        preg_match_all('/([a-zA-Z]+)\: (\d+), (\d+)/', $page, $matches, PREG_SET_ORDER, 0);
+        preg_match_all('/([\w\s-]+)\: (\d+), (\d+)/', $page, $matches, PREG_SET_ORDER, 0);
 
         $names = array_map(
             function ($match) {
